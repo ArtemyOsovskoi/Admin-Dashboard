@@ -48,5 +48,55 @@ table {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* border: 1px solid black; */
 }
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#sidebar {
+    border: 1px solid black;
+/*  grid-area = grid-row-start / grid-column-start / grid-row-end / grid-column-end. */
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+#logoContainer {
+border: 1px solid black;
+    padding: 1rem;
+}
+
+#sidebarNav {
+    padding: 2rem;
+}
+
+#navTop, #navBottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2rem;
+}
+
+main {
+    border: 1px solid rgb(16, 88, 223);
+    grid-area: 1 / 2 / 3 / 3;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#greetingContainer, #searchStatusContainer {
+    padding: 1rem;
+}
+
+#mainSection > div {
+    border: 1px solid black;
+    padding: 4rem;
+}
+
+
 
