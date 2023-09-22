@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+    <div id="sidebar">
+        <div id="logoContainer">
+            <img id="logo" src="" alt="">
+            <span>Student Dashboard</span>
+        </div>
+        <nav id="sidebarNav">
+            <ul id="navTop">
+                <li>Overview</li>
+                <li>Calendar</li>
+                <li>Classes</li>
+                <li>Marks</li>
+                <li>Profile</li>
+            </ul>
+            <ul id="navBottom">
+                <li>Settings</li>
+                <li>Support</li>
+                <input type="button" value="Log Out">
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <header>
+            <div id="greetingContainer">
+                <span id="welcome">Welcome, Student Name</span>
+                <span class="notifAvatarContainer">
+                    <img src="" alt="notification bell">
+                    <span>Student Name</span>
+                    <img src="" alt="avatar image">
+                </span>
+            </div>
+            <div id="searchStatusContainer">
+                <img src="" alt="search icon">
+                <span id="searchBarContainer">
+                    <input type="search" name="searchBar" id="searchBar">
+                </span>
+                <div id="statusContainer">
+                <input type="button" value="Status: Active" id="statusToggle">
+                </div>
+            </div>
+        </header> 
+        <div id="mainSection">
+            <div id="myActivityContainer"></div>
+            <div id="todayClassesContainer"></div>
+            <div id="calendar"></div>
+            <div id="updates"></div>
+            <div id="popularTopics"></div>
+        </div>
+    </main>
+</body>
+</html>
