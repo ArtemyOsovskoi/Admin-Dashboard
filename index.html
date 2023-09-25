@@ -9,21 +9,42 @@
 <body> 
     <div id="sidebar">
         <div id="logoContainer">
-            <img id="logo" src="" alt="">
+            <img id="logo" src="/images/account-school-outline.svg" alt="student logo">
             <span>Student Dashboard</span>
         </div>
         <nav id="sidebarNav">
             <ul id="navTop">
-                <li>Overview</li>
-                <li>Calendar</li>
-                <li>Classes</li>
-                <li>Marks</li>
-                <li>Profile</li>
+                <li>
+                    <img src="images/view-dashboard-outline.svg" class="icon" alt="">
+                    <a href=".">Overview</a>     
+                </li>
+                <li>
+                    <img src="images/calendar-month-outline.svg" class="icon" alt="">
+                    <a href=".">Calendar</a>
+                </li>
+                <li>
+                    <img src="images/school-outline.svg" class="icon" alt="">
+                    <a href=".">Classes</a>
+                </li>
+                <li>
+                    <img src="images/book-education-outline.svg" class="icon" alt="">
+                    <a href=".">Marks</a>
+                </li>
+                <li>
+                    <img src="images/account-school-outline.svg" class="icon" alt="">
+                    <a href=".">Profile</a>
+                </li>
             </ul>
             <ul id="navBottom">
-                <li>Settings</li>
-                <li>Support</li>
-                <input type="button" value="Log Out">
+                <li>
+                    <img src="images/cog.svg" class="icon" alt="">
+                    <a href=".">Settings</a>
+                </li>
+                <li>
+                    <img src="images/lifebuoy.svg" class="icon" alt="">
+                    <a href=".">Support</a>
+                </li>
+                <input id="logOutButton" type="button" value="Log Out">
             </ul>
         </nav>
     </div>
@@ -31,20 +52,18 @@
         <header>
             <div id="greetingContainer">
                 <span id="welcome">Welcome, Student Name</span>
-                <span class="notifAvatarContainer">
-                    <img src="" alt="notification bell">
-                    <span>Student Name</span>
-                    <img src="" alt="avatar image">
-                </span>
             </div>
             <div id="searchStatusContainer">
-                <img src="" alt="search icon">
+                <img src="/images/magnify.svg" alt="search icon" class="icon">
                 <span id="searchBarContainer">
                     <input type="search" name="searchBar" id="searchBar">
                 </span>
-                <div id="statusContainer">
+            </div>
+            <div id="notifAvatarContainer">
+                <img src="/images/bell-outline.svg" alt="notification bell" class="icon">
+                <img src="images/avatar.jpg" alt="avatar image" id="avatarImage">
+                <br>
                 <input type="button" value="Status: Active" id="statusToggle">
-                </div>
             </div>
         </header> 
         <div id="mainSection">
