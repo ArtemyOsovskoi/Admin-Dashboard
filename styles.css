@@ -154,7 +154,7 @@ li:active {
 }
 
 main {
-    border: 1px solid rgb(16, 88, 223);
+    /* border: 1px solid rgb(16, 88, 223); */
     grid-area: 1 / 2 / 3 / 3;
     margin-bottom: 1rem;
 }
@@ -311,6 +311,8 @@ p {
     padding-top: 1rem;
     padding-bottom: 1rem;
     display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
     gap: 20px;
 }
 
@@ -319,7 +321,6 @@ p {
 }
 
 .classCard {
-    /* border: solid 1px black; */
     padding: 2rem;
     background-color: #bae6fd;
     background-image:
@@ -339,11 +340,23 @@ p {
     align-items: center; */
 }
 
+.teacherAvatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+	display: inline-block;	
+	margin: 5px;
+	border-radius: 50%;	
+    object-fit:cover;
+}
+
 .classCard:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-
+.classCard > span {
+    font-weight: lighter;
+}
 
 /*  grid-area = grid-row-start / grid-column-start / grid-row-end / grid-column-end. */
 #myActivityContainer {
