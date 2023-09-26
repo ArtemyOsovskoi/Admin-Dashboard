@@ -54,14 +54,21 @@ body {
     display: grid;
     grid-template-columns: 1fr 5fr/* repeat(auto-fit, minmax(0.5fr, 5fr)) */;
     grid-template-rows: 1fr 1fr;
+    background-image:
+        radial-gradient(
+        circle at bottom left, 
+        #e0f2fe, #f0f9ff 50%
+    );
+    border: 1px solid red;
 }
 
+
+/* Sidebar Section */
+
 #sidebar {
-    border: 1px solid black;
     grid-area: 1 / 1 / 3 / 2;
     position: sticky;
     top: 0;
-    /* left: 0; */
     max-height: 100vh;
     min-height: min-content;
 }
@@ -93,7 +100,6 @@ li:active {
 }
 
 #logoContainer {
-    border: 1px solid black;
     padding: 3rem;
     font-size: 1.5em;
     display: flex;
@@ -102,8 +108,8 @@ li:active {
 
 #logo {
     filter: invert(51%) sepia(97%) saturate(1825%) hue-rotate(165deg) brightness(96%) contrast(91%);
-    width: 64px;
-    height: 64px;
+    width: 72px;
+    height: 72px;
 }
 
 #sidebarNav {
@@ -121,7 +127,13 @@ li:active {
 .icon {
     width: 32px;
     height: 32px;
-    filter: invert(16%) sepia(63%) saturate(2651%) hue-rotate(183deg) brightness(90%) contrast(91%);
+    filter: invert(58%) sepia(71%) saturate(868%) hue-rotate(168deg) brightness(101%) contrast(95%);
+}
+
+.courseLogo {
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
 }
 
 #navBottom {
@@ -131,6 +143,14 @@ li:active {
 #logOutButton {
     padding: 0.3rem 0.6rem 0.3rem 0.6rem;
     cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    background-color: #0369a1;
+    color: white;
+}
+
+#logOutButton:hover {
+    background-color: #38bdf8;
 }
 
 main {
@@ -139,11 +159,14 @@ main {
     margin-bottom: 1rem;
 }
 
+/* Header Section */
+
 header {
     display: grid;
     grid-template-columns: 
-        repeat(auto-fit, minmax(150px, 1fr));
+        repeat(auto-fit, minmax(290px, 1fr));
     align-items: center;
+    justify-items: start;
 }
 
 #greetingContainer, #searchStatusContainer, #notifAvatarContainer {
@@ -161,17 +184,21 @@ header {
 }
 
 #searchBar {
-    padding: 0.3rem 5rem 0.3rem 5rem;
+    padding: 0.3rem 8rem 0.3rem 8rem;
     border-radius: 20px;
-    background-color: #f0f4f7;
-    border: 2px solid #bae6fd;
+    background-color: #e0f2fe;
+    border: none;
+}
+
+#searchBar:focus {
+    outline: 2px solid #082f49;
 }
 
 #notifAvatarContainer {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 5px;
+    gap: 10px;
+    margin-left: 14rem;
 }
 
 #avatarImage {
@@ -180,7 +207,7 @@ header {
     border-radius: 50%;
 	display: inline-block;	
 	margin: 5px;
-    border: 4px solid #bae6fd;
+    border: 4px solid rgb(6, 167, 86);
 	border-radius: 50%;	
     object-fit:cover;
 }
@@ -199,6 +226,8 @@ header {
     background-color: #38bdf8;
 }
 
+/* Main Section */
+
 #mainSection {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
@@ -212,20 +241,41 @@ h2 {
 }
 
 #mainSection > div {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 2rem;
+}
+
+/* Activities Section */
+
+#myActivityContainer {
+    background-color: #f0f9ff;
+    border-radius: 20px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+#myActivityContainer:hover {
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 }
 
 #activities {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
 #activities > div {
-    padding: 1rem;
-    background: #e0f2fe;
+    padding: 2rem;
+    background-color: #bae6fd;
+    background-image:
+        radial-gradient(
+        circle at top right, 
+        #bae6fd, #f0f9ff 60%
+    );
     color: #082f49;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -233,27 +283,67 @@ h2 {
     font-size: 1.2em;
     font-weight: bold;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.courseLogo {
-    width: 80px;
-    height: 80px;
-    background-color: transparent;
+p {
+    font-weight: lighter;
 }
+
+#myActivityContainer > p {
+    margin-bottom: 1rem;
+}
+
 
 #activities > div:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 } 
 
+/* Today's Lesson Section */
 
-/* #activityCard {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 5px;
-} */
+#todayClassesContainer {
+    background-color: #f0f9ff;
+    border-radius: 20px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: grid;
+    gap: 20px;
+}
+
+#todayClassesContainer:hover {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+
+.classCard {
+    /* border: solid 1px black; */
+    padding: 2rem;
+    background-color: #bae6fd;
+    background-image:
+        radial-gradient(
+        circle at bottom left, 
+        #bae6fd, #f0f9ff 40%
+    );
+    color: #082f49;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+/*     display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center; */
+}
+
+.classCard:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
 
 /*  grid-area = grid-row-start / grid-column-start / grid-row-end / grid-column-end. */
 #myActivityContainer {
