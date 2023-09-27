@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&family=Zilla+Slab&display=swap" rel="stylesheet">
 </head>
 <body> 
     <div id="sidebar">
@@ -51,7 +55,7 @@
     <main>
         <header>
             <div id="greetingContainer">
-                <span id="welcome">Welcome, Mateo (@matzz)</span>
+                <span id="welcome">Welcome, Mateo @matzz</span>
             </div>
             <div id="searchStatusContainer">
                 <img src="/images/magnify.svg" alt="search icon" class="icon">
@@ -110,28 +114,28 @@
             <div id="todayClassesContainer">
                 <h2>Today's Classes</h2>
                     <div class="classCard">
-                        <p>Unity lesson 3: Interface</p>
-                        <img src="/images/teacher1.jpg" alt="teacherAvatar" class="teacherAvatar">
-                        <span>Joshua Dunn</span>
-                        <img src="/images/calendar-clock.svg" alt="timeCalendarIcon" class="icon">
-                        <p>10:00 AM</p>
+                        <span class="classTitle">Unity lesson 3: Interface</span>        
+                        <span class="teacherName"><img src="/images/teacher1.jpg" alt="teacherAvatar" class="teacherAvatar">
+                            Joshua Dunn</span>
+                        <span class="classTime"><img src="/images/calendar-clock.svg" alt="timeCalendarIcon" class="icon">
+                            10:00 AM</span>
                         <p>Let's dive deep into Unity and start with it's own UI. We learn about all the useful features
                         so you can start making your own game with ease.</p>
                     </div>
                 <div class="classCard">
-                    <p>React lesson 14: CV app</p>
-                    <img src="/images/teacher2.jpg" alt="teacherAvatar" class="teacherAvatar">
-                    <span>Victor Brown</span>
-                    <img src="/images/calendar-clock.svg" alt="timeCalendarIcon" class="icon">
-                    <p>01:00 PM</p>
+                    <span class="classTitle">React lesson 14: CV app</span>      
+                    <span class="teacherName"><img src="/images/teacher2.jpg" alt="teacherAvatar" class="teacherAvatar">
+                        Victor Brown</span>
+                    <span class="classTime"><img src="/images/calendar-clock.svg" alt="timeCalendarIcon" class="icon">
+                        01:00 PM</span>
                     <p>In this lesson we are going to make a CV app.</p>
                 </div>
                 <div class="classCard">
-                    <p>CSS lesson 23: Advanced selectors</p>
-                    <img src="/images/teacher3.jpg" alt="teacherAvatar" class="teacherAvatar">
-                    <span>Helen Basinski</span>
-                    <img src="/images/calendar-clock.svg" alt="timeCalendarIcon" class="icon">
-                    <p>02:20 PM</p>
+                    <span class="classTitle">CSS lesson 23: Advanced selectors</span>
+                    <span class="teacherName"><img src="/images/teacher3.jpg" alt="teacherAvatar" class="teacherAvatar">
+                        Helen Basinski</span>
+                    <span class="classTime"><img src="/images/calendar-clock.svg" alt="timeCalendarIcon" class="icon">
+                        02:20 PM</span>
                     <p>We continue our CSS journey and take a look at more advanced features.</p>
                 </div>              
             </div>
