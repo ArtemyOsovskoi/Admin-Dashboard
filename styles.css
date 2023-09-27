@@ -50,6 +50,10 @@ table {
     padding: 0;
 }
 
+html, body {
+    font-family: 'Zilla Slab', serif;
+}
+
 body {
     display: grid;
     grid-template-columns: 1fr 5fr/* repeat(auto-fit, minmax(0.5fr, 5fr)) */;
@@ -59,7 +63,6 @@ body {
         circle at bottom left, 
         #e0f2fe, #f0f9ff 50%
     );
-    border: 1px solid red;
 }
 
 
@@ -100,10 +103,14 @@ li:active {
 }
 
 #logoContainer {
-    padding: 3rem;
+    padding: 2rem;
     font-size: 1.5em;
     display: flex;
     align-items: center;
+}
+
+#logoContainer > span {
+    font-family: 'Lexend', sans-serif;
 }
 
 #logo {
@@ -121,7 +128,7 @@ li:active {
     flex-direction: column;
     gap: 30px;
     /* padding-left: 3rem; */
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 .icon {
@@ -147,6 +154,8 @@ li:active {
     border: none;
     background-color: #0369a1;
     color: white;
+    font-family: 'Zilla Slab', serif;
+    margin-top: 4rem;
 }
 
 #logOutButton:hover {
@@ -176,6 +185,7 @@ header {
 
 #welcome {
     font-size: 1.6em;
+    font-family: 'Lexend', sans-serif;
 }
 
 #searchStatusContainer {
@@ -227,6 +237,7 @@ header {
     border-radius: 20px;
     font-size: 0.8em;
     cursor: pointer;
+    font-family: 'Zilla Slab', serif;
 }
 
 #status:hover {
@@ -245,6 +256,7 @@ h2 {
     font-size: 1.3em;
     font-weight: bold;
     margin-bottom: 1rem;
+    font-family: 'Lexend', sans-serif;
 }
 
 #mainSection > div {
@@ -299,8 +311,13 @@ p {
     font-weight: lighter;
 }
 
+h4 {
+    font-family: 'Lexend', sans-serif;
+}
+
 #myActivityContainer > p {
     margin-bottom: 1rem;
+    font-size: 1.2rem;
 }
 
 
@@ -341,10 +358,28 @@ p {
     border-radius: 10px;
     font-size: 1.2em;
     font-weight: bold;
-/*     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
-    align-items: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.classCard > span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cardContainer > p {
+    font-size: 1.4rem;
+}
+
+.classTitle {
+    font-family: 'Lexend', sans-serif;
+}
+
+.teacherName, .classTime {
+    font-weight: lighter;
 }
 
 .teacherAvatar {
@@ -352,17 +387,12 @@ p {
     height: 32px;
     border-radius: 50%;
 	display: inline-block;	
-	margin: 5px;
 	border-radius: 50%;	
     object-fit:cover;
 }
 
 .classCard:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.classCard > span {
-    font-weight: lighter;
 }
 
 /*  grid-area = grid-row-start / grid-column-start / grid-row-end / grid-column-end. */
