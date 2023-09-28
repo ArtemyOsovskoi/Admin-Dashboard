@@ -384,7 +384,7 @@ h4 {
 }
 
 .cardContainer > p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 .classTitle {
@@ -464,7 +464,7 @@ h4 {
 #popularCourses > .courseCard {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     padding: 2rem;
     background-color: #bae6fd;
     background-image:
@@ -495,11 +495,13 @@ h4 {
 }
 
 .courseCard > .courseLogo {
-    height: 64px;
-    width: 64px;
+    height: 80px;
+    width: 80px;
 }
 
-
+.cardContainer> h4 {
+    margin-bottom: 1rem;
+}
 
 
 /* News and Updates Section */
