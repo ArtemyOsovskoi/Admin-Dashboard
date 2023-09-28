@@ -198,13 +198,13 @@ header {
     border-radius: 20px;
     background-color: #e0f2fe;
     border: none;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+    /* box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2); */
     transition: 0.3s;
 }
 
 #searchBar:focus {
     outline: none;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    /* box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2); */
 }
 
 #searchBar:hover {
@@ -269,7 +269,7 @@ h2 {
 #myActivityContainer {
     background-color: #f0f9ff;
     border-radius: 20px;
-    box-shadow: 0 1px 2px 0 #bae6fd;
+    box-shadow: 0 2px 4px 0 #bae6fd;
     transition: 0.3s;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -277,7 +277,7 @@ h2 {
 }
 
 #myActivityContainer:hover {
-      box-shadow: 0 2px 4px 0 #bae6fd;
+      box-shadow: 0 4px 16px 0 #bae6fd;
 }
 
 #activities {
@@ -331,7 +331,7 @@ h4 {
 #todayClassesContainer {
     background-color: #f0f9ff;
     border-radius: 20px;
-    box-shadow: 0 1px 2px 0 #bae6fd;
+    box-shadow: 0 2px 4px 0 #bae6fd;
     transition: 0.3s;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -340,10 +340,19 @@ h4 {
     grid-template-rows: repeat(auto-fit, 1fr);
     gap: 20px;
     margin-right: 2rem;
+    justify-items: center;
 }
 
 #todayClassesContainer:hover {
-    box-shadow: 0 2px 4px 0 #bae6fd;
+    box-shadow: 0 4px 16px 0 #bae6fd;
+}
+
+#todayClassesContainer > .icon {
+    cursor: pointer;
+}
+
+#todayClassesContainer > .icon:hover {
+    filter: invert(18%) sepia(82%) saturate(2229%) hue-rotate(182deg) brightness(96%) contrast(95%);
 }
 
 .classCard {
@@ -365,6 +374,7 @@ h4 {
     align-items: baseline;
     gap: 10px;
     cursor: pointer;
+    width: 100%;
 }
 
 .classCard > span {
@@ -402,14 +412,14 @@ h4 {
 #calendarContainer {
     background-color: #f0f9ff;
     border-radius: 20px;
-    box-shadow: 0 1px 2px 0 #bae6fd;
+    box-shadow: 0 2px 4px 0 #bae6fd;
     transition: 0.3s;
     padding-top: 1rem;
     padding-bottom: 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, 1fr);
     grid-template-rows: repeat(auto-fit, 1fr);
-    gap: 20px;
+    /* gap: 20px; */
     margin-bottom: 2rem;
     /* border: 1px solid black; */
 }
@@ -420,34 +430,73 @@ h4 {
 }
 
 #calendarContainer:hover {
-    box-shadow: 0 2px 4px 0 #bae6fd;
+    box-shadow: 0 4px 16px 0 #bae6fd;
+}
+
+#calendarContainer > h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #0ea5e9;
+    margin-bottom: 1rem;
 }
 
 
-
-
-
-
-
-
-/* Popular Classes Section */
-#popularClasses {
+/* Popular Courses Section */
+#popularCourses {
     background-color: #f0f9ff;
     border-radius: 20px;
-    box-shadow: 0 1px 2px 0 #bae6fd;
+    box-shadow: 0 2px 4px 0 #bae6fd;
     transition: 0.3s;
     padding-top: 1rem;
     padding-bottom: 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, 1fr);
     grid-template-rows: repeat(auto-fit, 1fr);
+    align-content: space-between;
     gap: 20px;
-
-    border: 1px solid black;
+    justify-items: center;
 }
 
-#popularClasses:hover {
-    box-shadow: 0 2px 4px 0 #bae6fd;
+#popularCourses:hover {
+    box-shadow: 0 4px 16px 0 #bae6fd;
+}
+
+#popularCourses > .courseCard {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 2rem;
+    background-color: #bae6fd;
+    background-image:
+        radial-gradient(
+        circle at top left, 
+        #bae6fd, #f0f9ff 30%
+    );
+    color: #082f49;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+#popularCourses > .courseCard:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#popularCourses > .icon {
+    cursor: pointer;
+}
+
+#popularCourses > .icon:hover {
+    filter: invert(18%) sepia(82%) saturate(2229%) hue-rotate(182deg) brightness(96%) contrast(95%);
+}
+
+.courseCard > .courseLogo {
+    height: 64px;
+    width: 64px;
 }
 
 
@@ -492,7 +541,7 @@ h4 {
     grid-area: 3 / 3 / 5 / 4 ;
 }
 
-#popularClasses {
+#popularCourses {
     grid-area: 4 / 2 / 5 / 3;
 }
 
