@@ -61,7 +61,7 @@ body {
     background-image:
         radial-gradient(
         circle at bottom left, 
-        #e0f2fe, #f0f9ff 50%
+        #e0f2fe, #f0f9ff 30%
     );
 }
 
@@ -173,7 +173,7 @@ main {
 header {
     display: grid;
     grid-template-columns: 
-        repeat(auto-fit, minmax(290px, 1fr));
+        repeat(auto-fit, minmax(100px, 1fr));
     align-items: center;
     justify-items: start;
 }
@@ -438,6 +438,15 @@ h4 {
     font-weight: bold;
     color: #0ea5e9;
     margin-bottom: 1rem;
+    display: flex;
+}
+
+#calendarContainer > h3 > img {
+    cursor: pointer;
+}
+
+#calendarContainer > h3 > img:hover {
+    filter: invert(18%) sepia(82%) saturate(2229%) hue-rotate(182deg) brightness(96%) contrast(95%);
 }
 
 
